@@ -165,3 +165,25 @@
     grid-template-columns: 1fr; 
   }
 }
+
+@layer components {
+  .movie-detail {
+    @apply bg-dark-100 p-6 rounded-2xl shadow-inner shadow-light-100/10 max-w-4xl mx-auto text-white text-center mt-10;
+
+    & h1 {
+      @apply text-3xl sm:text-4xl font-bold mb-6;
+    }
+
+    & img {
+      @apply w-full max-w-xs mx-auto mb-6 rounded-lg object-cover;
+    }
+
+    & p {
+      @apply text-light-100 text-base mb-2;
+    }
+
+    & strong {
+      @apply text-white;
+    }
+  }
+}
