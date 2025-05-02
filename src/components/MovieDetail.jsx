@@ -38,16 +38,22 @@ const MovieDetail = () => {
 
     return (
         <div className="movie-detail">
+
+
+            <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+
+            />
             <h1 className="text-2xl font-bold mb-4">{movie.title}</h1>
             <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
                 alt={movie.title}
                 className="mb-4"
             />
             <p><strong>Release Date:</strong> {movie.release_date}</p>
-            <p><strong>Rating:</strong> {movie.vote_average}</p>
+            <p><strong>Rating:</strong>  {movie.vote_average ? Math.round(movie.vote_average) : 'N/A'}</p>
             <p className="mt-2"><strong>Overview:</strong> {movie.overview}</p>
         </div>
+
     );
 };
 
