@@ -174,10 +174,6 @@
       @apply text-3xl sm:text-4xl font-bold mb-6;
     }
 
-    & img {
-      @apply w-full max-w-xs mx-auto mb-6 rounded-lg object-cover;
-    }
-
     & p {
       @apply text-light-100 text-base mb-2;
     }
@@ -185,5 +181,17 @@
     & strong {
       @apply text-white;
     }
-  }
+
+    & .image-wrapper {
+      @apply relative w-full h-48 sm:h-60 mb-10;
+    }
+
+    & .backdrop-image {
+      @apply w-full h-full object-cover rounded-xl opacity-50;
+    }
+
+    & .poster-image {
+      @apply w-40 sm:w-56 rounded-xl object-cover shadow-xl;
+    }
+}
 }

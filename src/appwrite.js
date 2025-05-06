@@ -5,7 +5,7 @@ const DATABASE_ID = import.meta.env.VITE_APPWRITE_DATABASE_ID;
 const COLLECTION_ID = import.meta.env.VITE_APPWRITE_COLLECTION_ID;
 
 const client = new Client()
-  .setEndpoint("http://cloud.appwrite.io/v1")
+  .setEndpoint("https://cloud.appwrite.io/v1")
   .setProject(PROJECT_ID);
 
 const database = new Databases(client);
@@ -26,7 +26,7 @@ export const updateSearchCount = async (searchTerm, movie) => {
         searchTerm,
         count: 1,
         movie_id: movie.id,
-        poster_url: `http://image.tmdb.org/t/p/w500/${movie.poster_url}`,
+        poster_url: `http://image.tmdb.org/t/p/w500/${movie.poster_path}`,
       });
     }
   } catch (error) {

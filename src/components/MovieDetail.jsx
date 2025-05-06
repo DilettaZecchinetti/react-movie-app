@@ -38,17 +38,20 @@ const MovieDetail = () => {
 
     return (
         <div className="movie-detail">
-
-
-            <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-
-            />
+            <div className="image-wrapper relative">
+                <img
+                    src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                    alt={`${movie.title} backdrop`}
+                    className="backdrop-image"
+                />
+                <img
+                    src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
+                    alt={`${movie.title} poster`}
+                    className="poster-image absolute left-4 top-1/2 -translate-y-1/2"
+                />
+            </div>
             <h1 className="text-2xl font-bold mb-4">{movie.title}</h1>
-            <img
-                src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
-                alt={movie.title}
-                className="mb-4"
-            />
+
             <p><strong>Release Date:</strong> {movie.release_date}</p>
             <p><strong>Rating:</strong>  {movie.vote_average ? Math.round(movie.vote_average) : 'N/A'}</p>
             <p className="mt-2"><strong>Overview:</strong> {movie.overview}</p>
