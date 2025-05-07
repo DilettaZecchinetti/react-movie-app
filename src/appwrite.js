@@ -42,7 +42,7 @@ export const getTrendingMovies = async () => {
     ]);
 
     return result.documents;
-  } catch {
+  } catch (error) {
     console.error(error);
   }
 };
