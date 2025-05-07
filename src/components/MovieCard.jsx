@@ -16,7 +16,7 @@ const MovieCard = ({ movie }) => {
             <div className="content">
                 <div className="rating">
                     <img src="star.svg" alt="Star Icon" />
-                    <p>{movie.vote_average ? Math.round(movie.vote_average) : 'N/A'}</p>
+                    <p>{movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A'}</p>
                 </div>
 
                 <span>•</span>
