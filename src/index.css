@@ -201,3 +201,48 @@
   }
 }
 
+@layer components {
+  .show-list-container {
+    @apply max-w-2xl mx-auto mt-10 p-6 bg-dark-100 rounded-2xl text-white shadow-md;
+  }
+
+  .show-list-container ol {
+    @apply space-y-4;
+  }
+
+  .show-list-container li {
+    @apply bg-gray-800 p-4 rounded-xl flex justify-between items-center;
+  }
+
+  .show-list-container input[type="text"] {
+    @apply text-black px-3 py-1 rounded-md w-full sm:w-auto;
+  }
+
+  .button-container {
+    @apply flex gap-2;
+  }
+
+  .modify-button,
+  .delete-button,
+  .save-button,
+  .cancel-button {
+    @apply px-3 py-1 rounded-md text-sm transition-colors;
+  }
+
+  .modify-button {
+    @apply bg-blue-600 hover:bg-blue-700 text-white;
+  }
+
+  .delete-button {
+    @apply bg-red-600 hover:bg-red-700 text-white;
+  }
+
+  .save-button {
+    @apply bg-green-600 hover:bg-green-700 text-white;
+  }
+
+  .cancel-button {
+    @apply bg-gray-600 hover:bg-gray-700 text-white;
+  }
+}
+
