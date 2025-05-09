@@ -168,38 +168,50 @@
 
 @layer components {
   .movie-detail {
-    @apply bg-dark-100 p-6 rounded-2xl shadow-inner shadow-light-100/10 max-w-4xl mx-auto text-white text-center mt-10;
+    @apply relative bg-black text-white rounded-xl overflow-hidden;
 
     & h1 {
-      @apply text-3xl sm:text-4xl font-bold mb-6;
+      @apply text-4xl sm:text-5xl font-extrabold mb-4;
     }
 
     & p {
-      @apply text-light-100 text-base mb-2;
+      @apply text-light-100 text-base mb-2 leading-relaxed;
     }
 
     & strong {
-      @apply text-white;
+      @apply text-white font-semibold;
     }
 
     & .image-wrapper {
-      @apply relative w-full h-48 sm:h-60 md:h-72 lg:h-96 mb-10;
+      @apply relative w-full h-[450px] sm:h-[500px] md:h-[550px] lg:h-[600px] mb-10;
     }
 
     & .backdrop-image {
-      @apply w-full h-full object-cover rounded-xl opacity-50;
+      @apply w-full h-full object-cover;
     }
 
     & .overlay {
-      @apply absolute inset-0 bg-black/40 rounded-xl;
+      @apply absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent;
+    }
+
+    & .poster-container {
+      @apply absolute bottom-0 left-6 sm:left-10 -mb-20 sm:-mb-24 z-10;
     }
 
     & .poster-image {
-      @apply w-40 sm:w-56 rounded-xl object-cover shadow-xl absolute left-4 top-1/2 -translate-y-1/2;
+      @apply w-32 sm:w-40 md:w-48 lg:w-56 rounded-xl shadow-2xl;
     }
 
+    & .content {
+      @apply relative z-20 mt-24 sm:mt-32 px-6 sm:px-10 flex flex-col sm:flex-row gap-6;
+    }
+
+    & .text-content {
+      @apply flex-1 max-w-3xl;
+    }
   }
 }
+
 
 @layer components {
   .show-list-container {
